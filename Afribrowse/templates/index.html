@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afribrowse - Offline Search Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="search-container" id="search-container">
+        <h1 class="logo">Afri<span>browse</span></h1>
+        <p class="subtitle">100% Offline. Zero Data. Infinite Knowledge.</p>
+        
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search your offline database..." autocomplete="off">
+            <button id="search-button">Search</button>
+        </div>
+
+        <div id="results-container" class="results-container"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

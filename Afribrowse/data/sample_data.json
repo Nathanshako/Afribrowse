@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Introduction to Python Programming",
+        "url": "local://python-intro",
+        "content": "Python is a high-level, interpreted programming language known for its readability. It is widely used in web development, data science, and artificial intelligence."
+    },
+    {
+        "id": 2,
+        "title": "How Offline Search Engines Work",
+        "url": "local://offline-search",
+        "content": "Offline search engines work by creating an inverted index of documents locally. This allows users to query text using algorithms like TF-IDF without an internet connection."
+    },
+    {
+        "id": 3,
+        "title": "The Beauty of Flask Web Framework",
+        "url": "local://flask-framework",
+        "content": "Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries, making it highly customizable."
+    }
+]

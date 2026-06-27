@@ -1,0 +1,142 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+/* This class shifts the UI to the top once results load, exactly like Google */
+.search-container.active {
+    margin-top: 40px;
+    align-self: flex-start;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    background: var(--card-bg);
+    padding: 8px;
+    border-radius: 30px;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.search-box:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+#search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    padding-left: 15px;
+}
+
+#search-button {
+    background-color: var(--accent);
+    color: #0f172a;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#search-button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Results Formatting */
+.results-container {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.result-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #334155;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.result-title {
+    font-size: 1.25rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.result-title:hover {
+    text-decoration: underline;
+}
+
+.result-url {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.result-snippet {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
